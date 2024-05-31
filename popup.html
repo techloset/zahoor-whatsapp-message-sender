@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to WhatsApp Messenger</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h1>CSV to WhatsApp Messenger</h1>
+    <div id="redirectAlert">
+        <p>Please open WhatsApp Web.</p>
+        <button id="openWhatsAppWeb">Open WhatsApp Web</button>
+    </div>
+    <div>
+        <input type="file" id="csvInput" accept=".csv" />
+        <select id="columnDropdown" style="display: none;"></select>
+        <div id="contactColumnSelection" style="display: none;">
+            <p>Select the column containing contact numbers:</p>
+            <select id="contactColumnOptions"></select>
+        </div>
+        <textarea cols="120" rows="10" id="textInput"
+            placeholder="Enter your message with placeholders like {{Name}}"></textarea>
+        <button id="startProcess">Preview</button>
+        <button id="sendMessages">Send Messages</button>
+    </div>
+    <div id="mappedResults"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
